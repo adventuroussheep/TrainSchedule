@@ -1,0 +1,22 @@
+.jumbotron{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.table {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.form-input{
+   position: relative;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+body {
+    background-image: url("../images/background.jpg");
+    background-size: cover;
+}
