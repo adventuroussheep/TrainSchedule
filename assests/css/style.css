@@ -1,14 +1,17 @@
 .jumbotron{
     position: absolute;
+    top: 10px;
     left: 50%;
     transform: translate(-50%, 0%);
 }
+
 
 .table {
     position: relative;
     left: 50%;
     transform: translate(-50%, 0%);
 }
+
 
 .form-input{
    position: relative;
@@ -19,4 +22,15 @@
 body {
     background-image: url("../images/background.jpg");
     background-size: cover;
+}
+
+#formTable{
+    background-color: rgba(255, 255, 255, 0.7);
+    margin-left: 8%;
+    margin-right: 8%;
+    border: 2px solid black;
+}
+
+h2{
+    text-align: center;
 }

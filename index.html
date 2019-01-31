@@ -1,79 +1,105 @@
 <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="./assests/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="./assests/css/style.css" />
+    <!-- BootStrap -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    />
+    <!-- FireBase -->
+    <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-database.js"></script>
+    <!-- jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"
+    ></script>
+    <!-- Moment.js -->
+    <script src="https://momentjs.com/downloads/moment.js"></script>
+  </head>
+  <body>
+    <div class="jumbotron jumbotron-fluid col-10">
+      <div class="container">
+        <h1 class="display-4">Chugging Along</h1>
+        <p class="lead">
+          This is a modified jumbotron that occupies the entire horizontal space
+          of its parent.
+        </p>
+      </div>
+    </div>
 
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="./assests/css/reset.css">
-        <link rel="stylesheet" type="text/css" href="./assests/css/style.css">
-       <!-- BootStrap -->
-       <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-       <!-- FireBase -->
-       <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
-       <!-- jQuery -->
-       <script
-  src="https://code.jquery.com/jquery-3.3.1.js"
-  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-  crossorigin="anonymous"></script>
-    </head>
-    <body>
-       
-        <div class="jumbotron jumbotron-fluid col-10">
-            <div class="container">
-              <h1 class="display-4">Fluid jumbotron</h1>
-              <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
-            </div>
-          </div>
+    <table class="table col-10" style="background-color: white">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Train Name</th>
+          <th scope="col">Destination</th>
+          <th scope="col">Frequency (min)</th>
+          <th scope="col">Next Arrival</th>
+          <th scope="col">Minutes Away</th>
+          <th scope="col">Remove Route</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody">
+      </tbody>
+    </table>
 
+    <div id="formTable">
 
-          <table class="table col-10">
-            <thead class="thead-dark">
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td>@twitter</td>
-              </tr>
-            </tbody>
-          </table>
-          
-
-          
-          
-          <form class="form-input col-10">
-            <div class="form-group">
-              <label for="formGroupExampleInput">Example label</label>
-              <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
-            </div>
-            <div class="form-group">
-              <label for="formGroupExampleInput2">Another label</label>
-              <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
-            </div>
-          </form>
-
-        
-        <script src="./assests/javascript/javascript.js" async defer></script>
-    </body>
+      <form class="form-input col-10">
+        <div class="form-group">
+          <h2>Add a Train</h2>
+          <label for="formGroupExampleInput">Train Name</label>
+          <input
+          type="text"
+          class="form-control"
+          id="formGroupExampleInput"
+          placeholder="Example input"
+          />
+        </div>
+        <div class="form-group">
+        <label for="formGroupExampleInput2">Destination</label>
+        <input
+        type="text"
+        class="form-control"
+        id="formGroupExampleInput2"
+        placeholder="Another input"
+        />
+      </div>
+      <div class="form-group">
+        <label for="formGroupExampleInput3"
+        >First Train Time (HH:mm - military time)</label
+        >
+        <input
+        type="text"
+        class="form-control"
+        id="formGroupExampleInput3"
+        placeholder="Another input"
+        />
+      </div>
+      <div class="form-group">
+        <label for="formGroupExampleInput4">Frequency (min)</label>
+        <input
+        type="text"
+        class="form-control"
+        id="formGroupExampleInput4"
+        placeholder="Another input"
+        />
+      </div>
+      <input type="submit" id="submitBtn" />
+      <br><br>
+    </form>
+  </div>
+    
+    <script src="./assests/javascript/javascript.js" async defer></script>
+  </body>
 </html>
