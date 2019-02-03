@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title></title>
+    <title>Train Schedule</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="./assests/css/reset.css" />
@@ -32,9 +32,9 @@
       <div class="container">
         <h1 class="display-4">Chugging Along</h1>
         <p class="lead">
-          This is a modified jumbotron that occupies the entire horizontal space
-          of its parent.
+          This Train Scheduler takes a users input and calculates the time until the next train.
         </p>
+        <h3 id="timeDisplay">The Current time is:</h3>
       </div>
     </div>
 
@@ -59,11 +59,11 @@
         <div class="form-group">
           <h2>Add a Train</h2>
           <label for="formGroupExampleInput">Train Name</label>
-          <input
+          <input required
           type="text"
           class="form-control"
           id="formGroupExampleInput"
-          placeholder="Example input"
+          placeholder="Name"
           />
         </div>
         <div class="form-group">
@@ -72,7 +72,7 @@
         type="text"
         class="form-control"
         id="formGroupExampleInput2"
-        placeholder="Another input"
+        placeholder="Destination" required
         />
       </div>
       <div class="form-group">
@@ -80,22 +80,22 @@
         >First Train Time (HH:mm - military time)</label
         >
         <input
-        type="text"
+        type="text" 
         class="form-control"
         id="formGroupExampleInput3"
-        placeholder="Another input"
+        placeholder="First Train" required
         />
       </div>
       <div class="form-group">
         <label for="formGroupExampleInput4">Frequency (min)</label>
         <input
-        type="text"
+        type="number"
         class="form-control"
         id="formGroupExampleInput4"
-        placeholder="Another input"
+        placeholder="Frequency" required
         />
       </div>
-      <input type="submit" id="submitBtn" />
+      <input type="submit" id="submitBtn"/>
       <br><br>
     </form>
   </div>
