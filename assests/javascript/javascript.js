@@ -118,6 +118,7 @@ $(document).ready(function() {
       var frequency1 = snapshot.val().frequency;
 
       // Math for calculating next arrival
+      // Could not figure out how to prevent next arrival time to not be less than the first train/prevent it from looping to next day
       const diff_mins = (currentTime, frequency1) => {
         var minDiff =
           (Math.abs(moment(currentTime, "HH:mm").diff(moment(), "minutes")) %
