@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  var keys = {
+  var config = {
     authDomain: "train-schedule-2c9ba.firebaseapp.com",
     databaseURL: "https://train-schedule-2c9ba.firebaseio.com",
     projectId: "train-schedule-2c9ba",
@@ -11,7 +11,7 @@ $(document).ready(function() {
    var myUrlKey = "QJM9-PAQW-9Y4T-DWE9"; 
 
 
-  firebase.initializeApp(keys);
+  firebase.initializeApp(config);
 
   var dataBase = firebase.database();
 
