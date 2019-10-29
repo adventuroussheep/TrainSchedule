@@ -6,9 +6,9 @@ $(document).ready(function() {
     projectId: "train-schedule-2c9ba",
     storageBucket: "train-schedule-2c9ba.appspot.com",
     messagingSenderId: "747766541073",
-    myUrlKey: "QJM9-PAQW-9Y4T-DWE9"
   };
-
+  
+   var myUrlKey = "QJM9-PAQW-9Y4T-DWE9"; 
 
 
   firebase.initializeApp(keys);
