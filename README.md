@@ -11,5 +11,4 @@ https://adventuroussheep.github.io/TrainSchedule/
 
 ~~~~~~~~~~~
 Future improvments:
-  Hide Bart API in Firebase
   Fix time loop into next day
