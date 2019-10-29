@@ -1,5 +1,16 @@
 $(document).ready(function() {
 
+  var keys = {
+    authDomain: "train-schedule-2c9ba.firebaseapp.com",
+    databaseURL: "https://train-schedule-2c9ba.firebaseio.com",
+    projectId: "train-schedule-2c9ba",
+    storageBucket: "train-schedule-2c9ba.appspot.com",
+    messagingSenderId: "747766541073",
+    myUrlKey: "QJM9-PAQW-9Y4T-DWE9"
+  };
+
+
+
   firebase.initializeApp(keys);
 
   var dataBase = firebase.database();
