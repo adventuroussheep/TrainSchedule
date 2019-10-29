@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  firebase.initializeApp(config);
+  firebase.initializeApp(keys);
 
   var dataBase = firebase.database();
 
@@ -23,7 +23,7 @@ $(document).ready(function() {
 
   // added Bart API for fun
   var queryURL =
-    "http://api.bart.gov/api/etd.aspx?cmd=etd&orig=ALL&key=QJM9-PAQW-9Y4T-DWE9&json=y";
+    "http://api.bart.gov/api/etd.aspx?cmd=etd&orig=ALL&key="+keys.myUrlKey+"&json=y";
   $.ajax({
     url: queryURL,
     method: "GET"
