@@ -34,7 +34,7 @@ $(document).ready(function() {
 
   // added Bart API for fun
   var queryURL =
-    "http://api.bart.gov/api/etd.aspx?cmd=etd&orig=ALL&key="+keys.myUrlKey+"&json=y";
+    "http://api.bart.gov/api/etd.aspx?cmd=etd&orig=ALL&key="+myUrlKey+"&json=y";
   $.ajax({
     url: queryURL,
     method: "GET"
