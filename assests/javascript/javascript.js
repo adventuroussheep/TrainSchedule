@@ -1,14 +1,14 @@
 $(document).ready(function() {
 
   var config = {
-    authDomain: "train-schedule-2c9ba.firebaseapp.com",
-    databaseURL: "https://train-schedule-2c9ba.firebaseio.com",
-    projectId: "train-schedule-2c9ba",
-    storageBucket: "train-schedule-2c9ba.appspot.com",
-    messagingSenderId: "747766541073",
+    authDomain: configKeys.authDomain,
+    databaseURL: configKeys.databaseURL,
+    projectId:  configKeys.projectId,
+    storageBucket: configKeys.storageBucket,
+    messagingSenderId: configKeys.messagingSenderId
   };
   
-   var myUrlKey = "QJM9-PAQW-9Y4T-DWE9"; 
+   var myUrlKey = configKeys.myUrlKey;
 
 
   firebase.initializeApp(config);
